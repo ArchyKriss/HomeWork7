@@ -1,12 +1,14 @@
 public class Main {
     public static void main(String[] args) {
         //task1
+        double percent = 1.01;
         int sum = 0;
         int accum = 15_000;
         int month = 0;
         while(sum<=2_459_000){
-            sum+=accum;
             month++;
+            sum+=accum;
+            sum+=sum*percent;
             System.out.println("Месяц "+month+", сумма накоплений равна "+sum+" рублей");
         }
 
@@ -68,6 +70,15 @@ public class Main {
         while (friday <= dayInMonth) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
             friday += 7;
+        }
+
+        //task8
+        int before = 2024 - 200;
+        int after = 2024 + 100;
+
+        for (int i = before; i < after; i ++) {
+            if (i % 79 == 0){
+                System.out.println(i);}
         }
 
     }
